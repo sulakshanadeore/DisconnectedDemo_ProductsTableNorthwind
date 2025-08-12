@@ -1,0 +1,30 @@
+﻿You get disconnected when the data is filled in the DataTable.(Its a in-memory cache)
+
+----When sending data to the database server
+1)Connect to the db(SqlConnection)
+2) Data Adapter(SqlDataAdapter) to write the statement on the table.("select * from tablename")
+3) The Data Adapter gets the update from the Datatable, which it passes
+to Command Builder(SqlCommandBuilder) which generates SQL commandS(Insert,Update,Delete)
+4)This commandbuilder will send the commands to the Database server to update the records,
+insert or delete.
+
+
+----When receving data from the database server
+**Only one statement is written with DataAdapter , which usually is . "select * from tablename"
+1)Connect to the db(SqlConnection)
+2) Data Adapter(SqlDataAdapter) to write the statement on the table.("select * from tablename")
+3) Create a DataSet object, which can hold multiple tables,views etc from the database.
+The Dataset represents DATABASE.
+4) Inside the DataSet, we fill multiple tables(DataTable), views(DataViews).
+Once the data is filled we are disconnected from the database server.
+5) Each datatable has multiple rows(DataRows) and columns(DataColumns) as per the table queried, and 
+these rows and columns can take the data.
+6) DataViews are used to filter, order, etc the data.
+DataViews fetch data from DataTables.
+
+The advantage of using Disconnected is:
+	1)  No need to upgrade the server hardware, even if multiple clients are querying it, 
+	its truly disconnected.
+	2) Whenever required reconnection is very simple and efficient.
+
+
