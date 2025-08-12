@@ -16,8 +16,10 @@ namespace DataAccessLayer
         DataTable dt = null;
         public ProductsDALOperations()
         {
-            string connectionstring = "server=mazenet-test;Integrated Security=ztrue;database=Nothwind;TrustServerCerficate=true";
-            cn=new SqlConnection(connectionstring);
+            string connectionstring = "server=mazenet-test;" +
+            "Integrated Security=true;" +
+            "database=northwind;TrustServerCertificate=true";
+            cn =new SqlConnection(connectionstring);
             da_products = new SqlDataAdapter("Select * from products", cn); 
             da_products.MissingSchemaAction = MissingSchemaAction.AddWithKey;
             //1 Connection can be used for all operations and 1 dataadapter for 1 table
@@ -162,7 +164,7 @@ namespace DataAccessLayer
                 product.UnitsInStock = Convert.ToInt16(rowfound["UnitsInStock"]);
                 product.UnitsOnOrder = Convert.ToInt16(rowfound["UnitsOnOrder"]);
                 product.ReorderLevel = Convert.ToInt16(rowfound["ReorderLevel"]);
-              product.Discontinued=Convert.ToBoolean(rowfound["Discontinued"]))
+                product.Discontinued = Convert.ToBoolean(rowfound["Discontinued"]);
                 
                 return product;
             }
@@ -195,7 +197,7 @@ namespace DataAccessLayer
                 product.UnitsInStock = Convert.ToInt16(rowfound["UnitsInStock"]);
                 product.UnitsOnOrder = Convert.ToInt16(rowfound["UnitsOnOrder"]);
                 product.ReorderLevel = Convert.ToInt16(rowfound["ReorderLevel"]);
-                product.Discontinued = Convert.ToBoolean(rowfound["Discontinued"]))
+                product.Discontinued = Convert.ToBoolean(rowfound["Discontinued"]);
             return product;
             
             

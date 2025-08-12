@@ -79,7 +79,7 @@ namespace BusinessLogicLayer
             p.SupplierID = item.SupplierID;
             p.CategoryID = item.CategoryID; 
                     p.UnitPrice = item.UnitPrice;
-                    p.QuantityPerUnit = item.QuantityPerUnit,;
+                    p.QuantityPerUnit = item.QuantityPerUnit;
             p.UnitsInStock = item.UnitsInStock;
             p.UnitsOnOrder = item.UnitsOnOrder;
             p.ReorderLevel = item.ReorderLevel;
@@ -115,7 +115,7 @@ namespace BusinessLogicLayer
             p.SupplierID = updatedProduct.SupplierID;
                 p.CategoryID = updatedProduct.CategoryID;
                     p.UnitPrice = updatedProduct.UnitPrice;
-                    p.QuantityPerUnit = updatedProduct.QuantityPerUnit,;
+                    p.QuantityPerUnit = updatedProduct.QuantityPerUnit;
                     p.UnitsInStock = updatedProduct.UnitsInStock; 
                     p.UnitsOnOrder = updatedProduct.UnitsOnOrder;
                     p.ReorderLevel = updatedProduct.ReorderLevel;
@@ -142,7 +142,7 @@ namespace BusinessLogicLayer
             p.SupplierID = found.SupplierID;
             p.CategoryID = found.CategoryID;
             p.UnitPrice = found.UnitPrice;
-            p.QuantityPerUnit = found.QuantityPerUnit,;
+            p.QuantityPerUnit = found.QuantityPerUnit;
             p.UnitsInStock = found.UnitsInStock;
             p.UnitsOnOrder = found.UnitsOnOrder;
             p.ReorderLevel = found.ReorderLevel;
@@ -153,13 +153,13 @@ namespace BusinessLogicLayer
         {
             Products found = operations.SearchProductByName(prodname);
             ProductsBAL p = new ProductsBAL();
-            p.ProductID = found.ProductID;
+        
             p.ProductID = found.ProductID;
             p.ProductName = found.ProductName;
             p.SupplierID = found.SupplierID;
             p.CategoryID = found.CategoryID;
             p.UnitPrice = found.UnitPrice;
-            p.QuantityPerUnit = found.QuantityPerUnit,;
+            p.QuantityPerUnit = found.QuantityPerUnit;
             p.UnitsInStock = found.UnitsInStock;
             p.UnitsOnOrder = found.UnitsOnOrder;
             p.ReorderLevel = found.ReorderLevel;
