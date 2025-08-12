@@ -74,7 +74,7 @@ namespace BusinessLogicLayer
         public bool AddProduct(ProductsBAL item)
         {
             Products p = new Products();
-            p.ProductID =item.ProductID;
+            //p.ProductID =item.ProductID;
             p.ProductName = item.ProductName;
             p.SupplierID = item.SupplierID;
             p.CategoryID = item.CategoryID; 
@@ -97,7 +97,7 @@ namespace BusinessLogicLayer
 
         public bool DeleteProduct(int productid)
         { 
-     bool result   =operations.RemoveProduct(productid);
+     bool result=operations.RemoveProduct(productid);
             if (result)
             {
                 return true;

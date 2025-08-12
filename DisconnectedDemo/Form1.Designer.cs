@@ -65,6 +65,7 @@
             btnInsert.TabIndex = 1;
             btnInsert.Text = "New Product";
             btnInsert.UseVisualStyleBackColor = true;
+            btnInsert.Click += btnInsert_Click;
             // 
             // btnUpdate
             // 
@@ -74,6 +75,7 @@
             btnUpdate.TabIndex = 2;
             btnUpdate.Text = "Update Product";
             btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // btnDelete
             // 
@@ -83,6 +85,7 @@
             btnDelete.TabIndex = 3;
             btnDelete.Text = "Delete Product";
             btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnfindbyid
             // 
@@ -102,6 +105,7 @@
             btnfindbyname.TabIndex = 5;
             btnfindbyname.Text = "FindByName";
             btnfindbyname.UseVisualStyleBackColor = true;
+            btnfindbyname.Click += btnfindbyname_Click;
             // 
             // txtprodid
             // 

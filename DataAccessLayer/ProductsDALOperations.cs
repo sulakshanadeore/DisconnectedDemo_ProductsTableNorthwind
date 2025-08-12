@@ -96,8 +96,7 @@ namespace DataAccessLayer
         DataRow rowfound=dt.Rows.Find(productid);
             if (rowfound != null)
             {
-              dt.Rows.Remove(rowfound);//Deleted from DataTable
-
+             rowfound.Delete();
                 //to delete from db
                 SqlCommandBuilder bldr = new SqlCommandBuilder(da_products);
                 int rowsAffected = da_products.Update(dsNw, "Products");
